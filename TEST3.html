@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+   var fibonacciArray = [];
+    function fibonacci(number) {
+    let n = 0;
+    let n1 = 1;
+    let fibonacci = 0;
+    let index = 0;
+    while (index < number) {
+        n = n1;
+        n1 = fibonacci;
+        fibonacci = n + n1;
+        fibonacciArray.push(fibonacci);
+        index++;
+        console.log(n,n1,fibonacci)
+    }
+}
+fibonacci(500)
+    function isFibonacci(num){
+        let x=true;
+        for(let i=0;i<fibonacciArray.length;i++){
+            if(num==fibonacciArray[i]){
+                x=true;
+            }else{
+                x=false;
+            }
+        }
+        if(x=true){
+            return true;
+        }else{
+            return false;
+        }
+    }
+    document.write(isFibonacci(5));
+</script>
+</body>
+</html>

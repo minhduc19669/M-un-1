@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<canvas id="myCanvas" width="900" height="900" style="border: 1px solid red"></canvas>
+<script>
+    function Circle(x,y,radius,color) {
+        this.x=x;
+        this.y=y;
+        this.radius=radius;
+        this.color=color;
+        this.render = function (canvas) {
+            canvas.beginPath();
+            canvas.fillStyle=this.color;
+            canvas.arc(this.x,this.y,this.radius,0,2*Math.PI);
+            canvas.fill();
+        }
+    }
+    let circle=new Circle(10,10,100,"#000000");
+    circle.render(document.getElementById("myCanvas").getContext('2d'));
+
+
+    // với tọa độ và bán kính đề bài đã cho thì chỉ vẽ ra 1/4 hình tròn????
+
+
+</script>
+</body>
+</html>
